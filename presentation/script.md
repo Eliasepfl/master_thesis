@@ -133,7 +133,7 @@ Twelve numbers, the image pooled to two by two, predict these coarse tokens bett
 
 *Starts at 9:25 · about 55 s*
 
-That is HINT, Hierarchical Injection of Neural Tokens: FREUD's idea, moved to inference. A per-subject EEG encoder feeds two closed-form ridge readouts. One predicts the global image embedding, which conditions the generator as before. The other predicts the coarse feature maps, which are quantised into tokens and written into the first K scales of a frozen VAR decoder; the decoder then completes the fine scales on its own. No gradient from EEG ever reaches the decoder, and adapting to a new person takes under a minute.
+That is HINT, Hierarchical Injection of Neural Tokens: FREUD's idea, moved to inference. The paper is currently under review at the NeurIPS Brain and Body workshop. A per-subject EEG encoder feeds two closed-form ridge readouts. One predicts the global image embedding, which conditions the generator as before. The other predicts the coarse feature maps, which are quantised into tokens and written into the first K scales of a frozen VAR decoder; the decoder then completes the fine scales on its own. No gradient from EEG ever reaches the decoder, and adapting to a new person takes under a minute.
 
 Writing a prefix involves two choices that prior work collapses into one: how many scales, K, and what fraction of the positions within them, q. We evaluate on THINGS-EEG2, ten participants and two hundred test images, against the published ENIGMA system on the field's seven metrics.
 
@@ -182,7 +182,7 @@ Alongside the method, we contribute controls for the benchmark itself. A single 
 
 The third project leaves the screen. To imagine is to see without a stimulus. That makes imagery attractive as a control signal and expensive as a measurement: imagery decoders are calibrated on imagery trials, which are slow to collect, because imagining imposes a high cognitive load and cannot be serialised, whereas perception affords rapid designs that gather thousands of trials per hour. And nothing outside the participant marks the moment of imagining.
 
-Within a person, perception and imagery are two readouts of one representation; in EEG, the shared part lives in posterior alpha oscillations. So the setting a calibration procedure needs is this: show images to a group once, then decode a new person who was never in it, with no labelled data from that person. To our knowledge, no study had occupied that setting for visual content.
+Within a person, perception and imagery are two readouts of one representation; in EEG, the shared part lives in posterior alpha oscillations. So the setting a calibration procedure needs is this: show images to a group once, then decode a new person who was never in it, with no labelled data from that person. To our knowledge, no study had occupied that setting for visual content. This work is currently under review at the NeurIPS Brain and Body workshop.
 
 ### Slide 21 · Train on 21 people's perception, test on the 22nd's imagery
 
